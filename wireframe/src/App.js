@@ -4,6 +4,7 @@ import BottomNavigation from './components/BottomNavigation';
 import CurrentRentals from './components/CurrentRentals';
 import RentToolCTA from './components/RentToolCTA';
 import Recommendations from './components/Recommendations';
+import SustainabilityNudge from './components/SustainabilityNudge';
 
 // home page
 function App() {
@@ -23,6 +24,9 @@ function App() {
         
         {/* Primary CTA - Rent a Tool */}
         <RentToolCTA />
+        
+        {/* Sustainability Nudge - Environmental Impact */}
+        <SustainabilityNudge />
         
         {/* Recommendations Section */}
         <Recommendations />
