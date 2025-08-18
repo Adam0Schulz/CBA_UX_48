@@ -99,6 +99,26 @@ body {
   height: 400px;
 }
 
+.rental-summary {
+  height: 160px;
+}
+
+.rental-history {
+  height: 160px;
+}
+
+.profile-form {
+  height: 320px;
+}
+
+.payment-section {
+  height: 240px;
+}
+
+.settings-section {
+  height: 280px;
+}
+
 .bottom-navigation {
   height: 80px;
   margin-top: auto;
