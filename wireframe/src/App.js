@@ -2,6 +2,7 @@ import './App.css';
 import ReminderBanner from './components/ReminderBanner';
 import BottomNavigation from './components/BottomNavigation';
 import CurrentRentals from './components/CurrentRentals';
+import RentToolCTA from './components/RentToolCTA';
 
 // home page
 function App() {
@@ -18,6 +19,9 @@ function App() {
         
         {/* Current Rentals Section */}
         <CurrentRentals />
+        
+        {/* Primary CTA - Rent a Tool */}
+        <RentToolCTA />
         
         {/* Additional content will be added in next iteration */}
         <div className="content-placeholder">
