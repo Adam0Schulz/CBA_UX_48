@@ -4,6 +4,9 @@
   padding: 16px;
   background-color: #FFF;
   border-bottom: 1px solid #BBB;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .filter-button {
@@ -15,7 +18,8 @@
   color: #444;
   border-radius: 4px;
   cursor: pointer;
-  display: inline-block;
+  flex: 1;
+  text-align: center;
 }
 
 /* Filter Popup */

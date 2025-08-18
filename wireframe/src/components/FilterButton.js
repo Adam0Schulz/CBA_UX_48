@@ -1,5 +1,6 @@
 import './FilterButton.css';
 import { useState } from 'react';
+import SortDropdown from './SortDropdown';
 
 function FilterButton() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -14,6 +15,9 @@ function FilterButton() {
       <div className="filter-button" onClick={toggleFilter}>
         [BUTTON: FILTERS]
       </div>
+      
+      {/* Sort Dropdown */}
+      <SortDropdown />
 
       {/* Filter Popup */}
       {isFilterOpen && (
