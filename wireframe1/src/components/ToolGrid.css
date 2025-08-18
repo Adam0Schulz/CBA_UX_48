@@ -1,0 +1,6 @@
+/* Tool Grid Component - Wireframe Styles */
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}

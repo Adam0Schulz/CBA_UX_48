@@ -1,0 +1,55 @@
+/* Bottom Navigation Component - Wireframe Styles */
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  border-top: 1px solid #BBB;
+  padding: 16px 0;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item.active {
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-item:not(.active) {
+  color: #777;
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  background-color: #EEE;
+  border: 1px solid #BBB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #777;
+  border-radius: 4px;
+}
+
+.nav-item.active .nav-icon {
+  background-color: #BBB;
+  color: #000;
+}
+
+.nav-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}

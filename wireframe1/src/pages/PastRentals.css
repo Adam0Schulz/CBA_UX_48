@@ -1,0 +1,214 @@
+/* Past Rentals Page - Wireframe Styles */
+.past-rentals-page {
+  background-color: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Header */
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EEE;
+}
+
+.back-link {
+  font-size: 12px;
+  color: #777;
+  text-decoration: none;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.back-link:hover {
+  color: #555;
+  border-color: #555;
+}
+
+.page-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EEE;
+}
+
+.filter-select,
+.sort-select {
+  background-color: #FFF;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-select:hover,
+.sort-select:hover {
+  border-color: #555;
+}
+
+/* Past Rentals List */
+.past-rentals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.past-rental-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+  background-color: #FFF;
+}
+
+.rental-image {
+  width: 50px;
+  height: 50px;
+  background-color: #EEE;
+  border: 1px solid #CCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #777;
+  flex-shrink: 0;
+}
+
+.rental-details {
+  flex: 1;
+}
+
+.rental-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.rental-period {
+  font-size: 10px;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.rental-cost {
+  font-size: 10px;
+  color: #777;
+  font-weight: bold;
+}
+
+.rental-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.receipt-button,
+.rent-again-button {
+  background: none;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #777;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.receipt-button:hover,
+.rent-again-button:hover {
+  border-color: #555;
+  color: #555;
+}
+
+.rent-again-button {
+  border-color: #000;
+  color: #000;
+  font-weight: bold;
+}
+
+.rent-again-button:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+/* Load More Section */
+.load-more-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid #EEE;
+}
+
+.load-more-button {
+  background: none;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.load-more-button:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+.showing-text {
+  font-size: 10px;
+  color: #777;
+}
+
+/* Summary */
+.rentals-summary {
+  padding: 16px;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+  background-color: #F9F9F9;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.summary-item:last-child {
+  margin-bottom: 0;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #555;
+}
+
+.summary-value {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
