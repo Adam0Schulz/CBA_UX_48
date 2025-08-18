@@ -19,6 +19,8 @@
   gap: 8px;
   flex: 1;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-item.active {

@@ -50,6 +50,12 @@ body {
 
 
 
+/* Catalogue Header */
+.catalogue-header {
+  padding: 16px;
+  background-color: #FFF;
+}
+
 /* Wireframe annotation styles */
 .annotation {
   position: absolute;
