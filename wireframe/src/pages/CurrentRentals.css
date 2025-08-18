@@ -1,0 +1,165 @@
+/* Current Rentals Page - Wireframe Styles */
+.current-rentals-page {
+  background-color: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Header */
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EEE;
+}
+
+.back-link {
+  font-size: 12px;
+  color: #777;
+  text-decoration: none;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.back-link:hover {
+  color: #555;
+  border-color: #555;
+}
+
+.page-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Rentals List */
+.rentals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.rental-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+  background-color: #FFF;
+}
+
+.rental-image {
+  width: 60px;
+  height: 60px;
+  background-color: #EEE;
+  border: 1px solid #CCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #777;
+  flex-shrink: 0;
+}
+
+.rental-details {
+  flex: 1;
+}
+
+.rental-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.rental-period {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.rental-status {
+  font-size: 10px;
+  color: #777;
+}
+
+.rental-status.overdue {
+  color: #D00;
+  font-weight: bold;
+}
+
+.rental-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.extend-button,
+.return-button {
+  background: none;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #777;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 70px;
+}
+
+.extend-button:hover,
+.return-button:hover {
+  border-color: #555;
+  color: #555;
+}
+
+.return-button.urgent {
+  border-color: #D00;
+  color: #D00;
+  font-weight: bold;
+}
+
+.return-button.urgent:hover {
+  background-color: #D00;
+  color: #FFF;
+}
+
+/* Summary */
+.rentals-summary {
+  padding: 16px;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+  background-color: #F9F9F9;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.summary-item:last-child {
+  margin-bottom: 0;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #555;
+}
+
+.summary-value {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
+
+.summary-value.overdue {
+  color: #D00;
+}

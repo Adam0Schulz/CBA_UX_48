@@ -5,3 +5,261 @@
   display: flex;
   flex-direction: column;
 }
+
+/* Profile Sections */
+.profile-section {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 16px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+/* Rental Summary */
+.rental-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+  background-color: #F9F9F9;
+}
+
+.summary-info {
+  flex: 1;
+}
+
+.summary-count {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.summary-status {
+  font-size: 10px;
+  color: #777;
+}
+
+.view-all-link {
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #000;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.view-all-link:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+/* Personal Information */
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #EEE;
+}
+
+.info-field:last-child {
+  border-bottom: none;
+}
+
+.field-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #444;
+  min-width: 60px;
+}
+
+.field-value {
+  flex: 1;
+  font-size: 12px;
+  color: #000;
+}
+
+.edit-button {
+  background: none;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #777;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  border-color: #555;
+  color: #555;
+}
+
+/* Payment Method */
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+  background-color: #FFF;
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-type {
+  font-size: 10px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.card-number {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.card-expiry {
+  font-size: 10px;
+  color: #777;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.remove-button {
+  background: none;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #777;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  border-color: #555;
+  color: #555;
+}
+
+.add-payment-button {
+  background: none;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-payment-button:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+/* Notification Settings */
+.notification-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #EEE;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-info {
+  flex: 1;
+}
+
+.setting-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.setting-description {
+  font-size: 10px;
+  color: #777;
+}
+
+.setting-control {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-button {
+  background: none;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #777;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-button.active {
+  background-color: #000;
+  color: #FFF;
+  border-color: #000;
+}
+
+.toggle-button:hover {
+  border-color: #555;
+  color: #555;
+}
+
+.toggle-button.active:hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+.timing-select {
+  background-color: #FFF;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.timing-select:hover {
+  border-color: #555;
+}
