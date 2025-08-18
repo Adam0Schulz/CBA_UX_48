@@ -26,6 +26,7 @@ body {
 .main-content {
   flex: 1;
   padding: 16px;
+  padding-bottom: 96px; /* Space for bottom nav (80px nav height + 16px margin) */
   overflow-y: auto;
 }
 

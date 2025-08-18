@@ -3,6 +3,7 @@ import ReminderBanner from './components/ReminderBanner';
 import BottomNavigation from './components/BottomNavigation';
 import CurrentRentals from './components/CurrentRentals';
 import RentToolCTA from './components/RentToolCTA';
+import Recommendations from './components/Recommendations';
 
 // home page
 function App() {
@@ -23,10 +24,9 @@ function App() {
         {/* Primary CTA - Rent a Tool */}
         <RentToolCTA />
         
-        {/* Additional content will be added in next iteration */}
-        <div className="content-placeholder">
-          [ADDITIONAL CONTENT - TO BE DEFINED]
-        </div>
+        {/* Recommendations Section */}
+        <Recommendations />
+        
       </div>
 
       {/* Bottom Navigation Component */}
