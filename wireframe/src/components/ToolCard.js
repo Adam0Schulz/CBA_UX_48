@@ -12,6 +12,7 @@ function ToolCard({ tool }) {
           {tool.name}
         </div>
         
+        
         <div className="tool-price">
           {tool.price}
         </div>
