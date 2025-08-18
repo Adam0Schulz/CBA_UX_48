@@ -5,19 +5,19 @@ function Home() {
     <div className="app">
       {/* Utility bar - replaces ReminderBanner */}
       <div className="lowfi-box utility-bar">
-        Utility bar
+        Reminder bar
       </div>
 
       {/* Main Content Area */}
       <div className="main-content">
-        {/* Navigation bar - replaces page header */}
-        <div className="lowfi-box navigation-bar">
-          Navigation bar
+        {/* Hero - replaces page header */}
+        <div className="lowfi-box hero">
+          Hero
         </div>
         
         {/* Content - replaces CurrentRentals */}
         <div className="lowfi-box content-section">
-          Content
+          Current rentals
         </div>
         
         {/* CTA band - replaces RentToolCTA */}
@@ -26,13 +26,13 @@ function Home() {
         </div>
         
         {/* Content - replaces SustainabilityNudge */}
-        <div className="lowfi-box content-section">
-          Content
+        <div className="lowfi-box sustainability-section">
+          Sustainability
         </div>
         
         {/* Results grid - replaces Recommendations */}
         <div className="lowfi-box results-grid">
-          Results grid
+          Recommendations
         </div>
         
       </div>

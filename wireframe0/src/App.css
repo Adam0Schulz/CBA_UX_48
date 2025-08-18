@@ -51,6 +51,10 @@ body {
   margin-bottom: 8px;
 }
 
+.hero {
+  height: 80px;
+}
+
 .navigation-bar {
   height: 80px;
 }
@@ -61,6 +65,14 @@ body {
 
 .cta-band {
   height: 240px;
+}
+
+.sustainability-section {
+  height: 160px;
+}
+
+.filters {
+  height: 200px;
 }
 
 .results-grid {

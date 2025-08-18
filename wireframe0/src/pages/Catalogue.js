@@ -1,41 +1,35 @@
 import '../App.css';
-import ReminderBanner from '../components/ReminderBanner';
-import BottomNavigation from '../components/BottomNavigation';
-import SearchBar from '../components/SearchBar';
-import CategoryChips from '../components/CategoryChips';
-import FilterButton from '../components/FilterButton';
-import ToolGrid from '../components/ToolGrid';
 
 function Catalogue() {
   return (
     <div className="app">
-      {/* Reminder Banner Component */}
-      <ReminderBanner />
-      
-      {/* Page Header */}
-      <div className="catalogue-header">
-        <div className="page-header">
-          FOG Hardware - Catalogue
-        </div>
+      {/* Utility bar - replaces ReminderBanner */}
+      <div className="lowfi-box utility-bar">
+        Reminder bar
       </div>
-      
-      {/* Search Bar */}
-      <SearchBar />
-      
-      {/* Category Chips */}
-      <CategoryChips />
-      
-      {/* Filter Button */}
-      <FilterButton />
 
       {/* Main Content Area */}
       <div className="main-content">
-        {/* Tool Grid */}
-        <ToolGrid />
+        {/* Hero - replaces page header */}
+        <div className="lowfi-box hero">
+          Hero
+        </div>
+        
+        {/* Filters - replaces SearchBar, CategoryChips, and FilterButton */}
+        <div className="lowfi-box filters">
+          Filters
+        </div>
+        
+        {/* Results grid - replaces ToolGrid */}
+        <div className="lowfi-box results-grid">
+          Results grid
+        </div>
       </div>
 
-      {/* Bottom Navigation Component */}
-      <BottomNavigation activeTab="catalogue" />
+      {/* Navigation bar - replaces BottomNavigation */}
+      <div className="lowfi-box bottom-navigation">
+        Navigation bar
+      </div>
     </div>
   );
 }
