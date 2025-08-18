@@ -12,10 +12,10 @@ function BottomNavigation({ activeTab = null }) {
         <div className="nav-icon">[ICON: CATALOGUE]</div>
         <div className="nav-label">CATALOGUE</div>
       </Link>
-      <div className={`nav-item ${activeTab === 'profile' ? 'active' : ''}`}>
+      <Link to="/profile" className={`nav-item ${activeTab === 'profile' ? 'active' : ''}`}>
         <div className="nav-icon">[ICON: PROFILE]</div>
         <div className="nav-label">PROFILE</div>
-      </div>
+      </Link>
     </div>
   );
 }

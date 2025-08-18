@@ -1,0 +1,7 @@
+/* Profile Page - Wireframe Styles */
+.profile {
+  background-color: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
