@@ -1,8 +1,14 @@
 import './ToolCard.css';
+import { useNavigate } from 'react-router-dom';
 
 function ToolCard({ tool }) {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/tool/${tool.id}`);
+  };
   return (
-    <div className="tool-card">
+    <div className="tool-card" onClick={handleCardClick}>
       <div className="tool-image">
         [IMAGE]
       </div>

@@ -7,6 +7,12 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.tool-card:hover {
+  border-color: #999;
 }
 
 .tool-image {

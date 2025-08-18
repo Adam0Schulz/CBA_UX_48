@@ -1,7 +1,7 @@
 import './BottomNavigation.css';
 import { Link } from 'react-router-dom';
 
-function BottomNavigation({ activeTab = 'home' }) {
+function BottomNavigation({ activeTab = null }) {
   return (
     <div className="bottom-navigation">
       <Link to="/" className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}>
