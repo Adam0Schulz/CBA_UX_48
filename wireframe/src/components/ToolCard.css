@@ -1,0 +1,61 @@
+/* Tool Card Component - Wireframe Styles */
+.tool-card {
+  background-color: #FFF;
+  border: 1px solid #BBB;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tool-image {
+  width: 100%;
+  height: 120px;
+  background-color: #EEE;
+  border: 1px solid #BBB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #777;
+  border-radius: 4px;
+}
+
+.tool-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tool-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.2;
+}
+
+.tool-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.tool-availability {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.tool-availability.available {
+  background-color: #EEE;
+  color: #000;
+  border: 1px solid #BBB;
+}
+
+.tool-availability.unavailable {
+  background-color: #FFF;
+  color: #777;
+  border: 1px solid #777;
+}

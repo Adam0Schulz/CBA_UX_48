@@ -4,6 +4,7 @@ import BottomNavigation from '../components/BottomNavigation';
 import SearchBar from '../components/SearchBar';
 import CategoryChips from '../components/CategoryChips';
 import FilterButton from '../components/FilterButton';
+import ToolGrid from '../components/ToolGrid';
 
 function Catalogue() {
   return (
@@ -29,10 +30,8 @@ function Catalogue() {
 
       {/* Main Content Area */}
       <div className="main-content">
-        {/* Content will be added in next iteration */}
-        <div className="content-placeholder">
-          [CATALOGUE CONTENT - TO BE DEFINED]
-        </div>
+        {/* Tool Grid */}
+        <ToolGrid />
       </div>
 
       {/* Bottom Navigation Component */}
