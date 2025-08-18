@@ -1,0 +1,94 @@
+/* LOW-FI WIREFRAME STYLES */
+/* Following low-fi wireframe guidelines: #EEE fill, #999 2px border, white background */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #FFF;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Low-fi box styling - applies to all wireframe boxes */
+.lowfi-box {
+  background-color: #EEE;
+  border: 2px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #555;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Specific box heights following guidelines */
+.utility-bar {
+  height: 72px;
+  margin-bottom: 8px;
+}
+
+.navigation-bar {
+  height: 80px;
+}
+
+.content-section {
+  height: 480px;
+}
+
+.cta-band {
+  height: 240px;
+}
+
+.results-grid {
+  height: 600px;
+}
+
+.bottom-navigation {
+  height: 80px;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+
+
+/* Catalogue Header */
+.catalogue-header {
+  padding: 16px;
+  background-color: #FFF;
+}
+
+/* Wireframe annotation styles */
+.annotation {
+  position: absolute;
+  background-color: #FFF;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #777;
+  border-radius: 4px;
+  z-index: 100;
+}
