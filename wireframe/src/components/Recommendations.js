@@ -1,17 +1,54 @@
 import './Recommendations.css';
+import ToolCard from './ToolCard';
 
 function Recommendations() {
   // Mock data for recommendations - following wireframe guidelines
   const oftenRentedWith = [
-    { id: 1, name: "Safety Goggles" },
-    { id: 2, name: "Extension Cord" },
-    { id: 3, name: "Work Gloves" }
+    { 
+      id: 'safety-goggles', 
+      name: "Safety Goggles", 
+      price: "12 DKK/day",
+      available: true,
+      nextAvailable: null
+    },
+    { 
+      id: 'extension-cord-rec', 
+      name: "Extension Cord", 
+      price: "15 DKK/day",
+      available: true,
+      nextAvailable: null
+    },
+    { 
+      id: 'work-gloves', 
+      name: "Work Gloves", 
+      price: "8 DKK/day",
+      available: false,
+      nextAvailable: "Monday"
+    }
   ];
 
   const popularThisWeekend = [
-    { id: 4, name: "Lawn Mower" },
-    { id: 5, name: "Hedge Trimmer" },
-    { id: 6, name: "Pressure Washer" }
+    { 
+      id: 'lawn-mower', 
+      name: "Lawn Mower", 
+      price: "180 DKK/day",
+      available: true,
+      nextAvailable: null
+    },
+    { 
+      id: 'hedge-trimmer', 
+      name: "Hedge Trimmer", 
+      price: "95 DKK/day",
+      available: false,
+      nextAvailable: "Sunday"
+    },
+    { 
+      id: 'pressure-washer', 
+      name: "Pressure Washer", 
+      price: "150 DKK/day",
+      available: true,
+      nextAvailable: null
+    }
   ];
 
   return (
@@ -26,18 +63,8 @@ function Recommendations() {
           Often rented with your tools
         </div>
         <div className="recommendation-items">
-          {oftenRentedWith.map(item => (
-            <div key={item.id} className="recommendation-card">
-              <div className="recommendation-image">
-                [IMAGE]
-              </div>
-              <div className="recommendation-name">
-                {item.name}
-              </div>
-              <div className="recommendation-action">
-                [BUTTON: ADD]
-              </div>
-            </div>
+          {oftenRentedWith.map(tool => (
+            <ToolCard key={tool.id} tool={tool} />
           ))}
         </div>
       </div>
@@ -48,18 +75,8 @@ function Recommendations() {
           Popular this weekend
         </div>
         <div className="recommendation-items">
-          {popularThisWeekend.map(item => (
-            <div key={item.id} className="recommendation-card">
-              <div className="recommendation-image">
-                [IMAGE]
-              </div>
-              <div className="recommendation-name">
-                {item.name}
-              </div>
-              <div className="recommendation-action">
-                [BUTTON: VIEW]
-              </div>
-            </div>
+          {popularThisWeekend.map(tool => (
+            <ToolCard key={tool.id} tool={tool} />
           ))}
         </div>
       </div>
