@@ -79,6 +79,26 @@ body {
   height: 600px;
 }
 
+.product-gallery {
+  height: 320px;
+}
+
+.pricing-info {
+  height: 160px;
+}
+
+.safety-content {
+  height: 240px;
+}
+
+.specs-table {
+  height: 320px;
+}
+
+.reviews-content {
+  height: 400px;
+}
+
 .bottom-navigation {
   height: 80px;
   margin-top: auto;
