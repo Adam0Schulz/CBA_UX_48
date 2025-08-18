@@ -1,0 +1,28 @@
+/* Reminder Banner Component - Wireframe Styles */
+.reminder-banner {
+  background-color: #EEE;
+  border-bottom: 1px solid #BBB;
+  padding: 16px;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-text {
+  font-size: 14px;
+  color: #444;
+  font-weight: regular;
+}
+
+.banner-action {
+  border: 2px solid #444;
+  padding: 8px 16px;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: bold;
+  color: #444;
+  border-radius: 4px;
+}

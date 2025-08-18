@@ -1,0 +1,62 @@
+/* WIREFRAME STYLES - NO VISUAL DESIGN */
+/* Following wireframe guidelines: grayscale only, 8px spacing scale */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #FFF;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.page-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.content-placeholder {
+  background-color: #EEE;
+  border: 1px dashed #BBB;
+  padding: 32px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-bottom: 80px; /* Space for bottom nav */
+}
+
+
+
+/* Wireframe annotation styles */
+.annotation {
+  position: absolute;
+  background-color: #FFF;
+  border: 1px solid #777;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #777;
+  border-radius: 4px;
+  z-index: 100;
+}
