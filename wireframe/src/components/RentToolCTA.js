@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './RentToolCTA.css';
 
 function RentToolCTA() {
@@ -7,9 +8,9 @@ function RentToolCTA() {
         <div className="cta-text">
           Need more tools?
         </div>
-        <div className="cta-button">
+        <Link to="/catalogue" className="cta-button">
           [BUTTON: RENT A TOOL]
-        </div>
+        </Link>
       </div>
     </div>
   );

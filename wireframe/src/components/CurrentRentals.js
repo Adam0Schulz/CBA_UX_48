@@ -1,27 +1,45 @@
+import { Link } from 'react-router-dom';
 import './CurrentRentals.css';
 
 function CurrentRentals() {
   // Mock data for current rentals - following wireframe guidelines
-  const currentRentals = [
+  const allCurrentRentals = [
     {
       id: 1,
-      toolName: "Power Drill XL",
-      dueDate: "Jan 20, 2025",
+      toolName: "Angle Grinder Pro",
+      dueDate: "Dec 20, 2024",
       dueTime: "3:00 PM"
     },
     {
       id: 2,
-      toolName: "Circular Saw",
-      dueDate: "Jan 22, 2025", 
-      dueTime: "11:00 AM"
+      toolName: "Pressure Washer",
+      dueDate: "Dec 19, 2024", 
+      dueTime: "11:00 AM",
+      overdue: true
     },
     {
       id: 3,
-      toolName: "Angle Grinder",
-      dueDate: "Jan 25, 2025",
+      toolName: "Lawn Mower Electric",
+      dueDate: "Dec 22, 2024",
       dueTime: "5:00 PM"
+    },
+    {
+      id: 4,
+      toolName: "Tile Cutter",
+      dueDate: "Dec 21, 2024",
+      dueTime: "2:00 PM"
+    },
+    {
+      id: 5,
+      toolName: "Concrete Mixer",
+      dueDate: "Dec 20, 2024",
+      dueTime: "4:00 PM"
     }
   ];
+
+  // Show only first 3 rentals on home page
+  const displayedRentals = allCurrentRentals.slice(0, 3);
+  const remainingCount = allCurrentRentals.length - displayedRentals.length;
 
   return (
     <div className="current-rentals">
@@ -30,8 +48,8 @@ function CurrentRentals() {
       </div>
       
       <div className="rental-cards">
-        {currentRentals.map(rental => (
-          <div key={rental.id} className="rental-card">
+        {displayedRentals.map(rental => (
+          <div key={rental.id} className={`rental-card ${rental.overdue ? 'overdue' : ''}`}>
             <div className="rental-image">
               [IMAGE]
             </div>
@@ -41,7 +59,7 @@ function CurrentRentals() {
                 {rental.toolName}
               </div>
               <div className="due-info">
-                Due: {rental.dueDate} at {rental.dueTime}
+                {rental.overdue ? 'Overdue!' : `Due: ${rental.dueDate} at ${rental.dueTime}`}
               </div>
             </div>
             
@@ -56,6 +74,17 @@ function CurrentRentals() {
           </div>
         ))}
       </div>
+      
+      {remainingCount > 0 && (
+        <div className="more-rentals">
+          <div className="more-rentals-text">
+            + {remainingCount} more rental{remainingCount > 1 ? 's' : ''}
+          </div>
+          <Link to="/current-rentals" className="view-all-button">
+            [VIEW ALL]
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
