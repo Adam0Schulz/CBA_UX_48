@@ -1,0 +1,33 @@
+/* Category Chips Component - Wireframe Styles */
+.category-chips {
+  padding: 16px;
+  background-color: #FFF;
+  border-bottom: 1px solid #BBB;
+}
+
+.chips-container {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.category-chip {
+  border: 1px solid #BBB;
+  padding: 8px 16px;
+  background-color: #FFF;
+  font-size: 12px;
+  font-weight: regular;
+  color: #777;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.category-chip.active {
+  border: 2px solid #000;
+  background-color: #EEE;
+  color: #000;
+  font-weight: bold;
+}

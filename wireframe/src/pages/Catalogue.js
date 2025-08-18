@@ -2,6 +2,7 @@ import '../App.css';
 import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
 import SearchBar from '../components/SearchBar';
+import CategoryChips from '../components/CategoryChips';
 
 function Catalogue() {
   return (
@@ -18,6 +19,9 @@ function Catalogue() {
       
       {/* Search Bar */}
       <SearchBar />
+      
+      {/* Category Chips */}
+      <CategoryChips />
 
       {/* Main Content Area */}
       <div className="main-content">
