@@ -3,6 +3,7 @@ import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
 import SearchBar from '../components/SearchBar';
 import CategoryChips from '../components/CategoryChips';
+import FilterButton from '../components/FilterButton';
 
 function Catalogue() {
   return (
@@ -22,6 +23,9 @@ function Catalogue() {
       
       {/* Category Chips */}
       <CategoryChips />
+      
+      {/* Filter Button */}
+      <FilterButton />
 
       {/* Main Content Area */}
       <div className="main-content">
