@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
 import RentalCard from '../components/RentalCard';
@@ -12,7 +12,7 @@ import mixer from '../assets/mixer.jpg';
 import './CurrentRentals.css';
 
 function CurrentRentals() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [isReturnPopupOpen, setIsReturnPopupOpen] = useState(false);
   const [selectedTool, setSelectedTool] = useState('');
 

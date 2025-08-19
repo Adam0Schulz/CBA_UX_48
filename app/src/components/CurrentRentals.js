@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './CurrentRentals.css';
 import RentalCard from './RentalCard';
@@ -10,7 +10,7 @@ import tileCutter from '../assets/tile_cutter.jpg';
 import mixer from '../assets/mixer.jpg';
 
 function CurrentRentals() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [isReturnPopupOpen, setIsReturnPopupOpen] = useState(false);
   const [selectedTool, setSelectedTool] = useState('');
 
