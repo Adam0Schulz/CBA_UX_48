@@ -1,23 +1,39 @@
-/* Profile Page - Wireframe Styles */
+/* Profile Page - Dark Mode Johannes Fog Design */
 .profile {
-  background-color: #FFF;
+  background-color: #0f0f0f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+.main-content {
+  padding: 0 16px;
+  flex: 1;
+  margin-bottom: 80px;
+}
+
+.page-header {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+  font-family: 'Dinpro', helvetica, arial, sans-serif;
+}
+
 /* Profile Sections */
 .profile-section {
   margin-bottom: 24px;
-  border-bottom: 1px solid #EEE;
-  padding-bottom: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
 }
 
 .section-title {
-  font-size: 14px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-family: 'Dinpro', helvetica, arial, sans-serif;
 }
 
 /* Rental Summary */
@@ -25,10 +41,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  border: 1px solid #BBB;
-  border-radius: 4px;
-  background-color: #F9F9F9;
+  padding: 16px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #1a1a1a;
 }
 
 .summary-info {
@@ -36,45 +52,47 @@
 }
 
 .summary-count {
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
 }
 
 .summary-status {
-  font-size: 10px;
-  color: #777;
+  font-size: 12px;
+  color: #ccc;
 }
 
 .view-all-link {
   font-size: 12px;
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
-  border: 2px solid #000;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: bold;
+  border: 2px solid #013d7a;
+  background-color: #013d7a;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .view-all-link:hover {
-  background-color: #000;
-  color: #FFF;
+  background-color: #024a94;
+  border-color: #024a94;
 }
 
 /* Personal Information */
 .personal-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .info-field {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 0;
-  border-bottom: 1px solid #EEE;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
 }
 
 .info-field:last-child {
@@ -82,48 +100,49 @@
 }
 
 .field-label {
-  font-size: 12px;
-  font-weight: bold;
-  color: #444;
-  min-width: 60px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ccc;
+  min-width: 80px;
 }
 
 .field-value {
   flex: 1;
-  font-size: 12px;
-  color: #000;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 .edit-button {
   background: none;
-  border: 1px solid #777;
-  padding: 4px 8px;
-  font-size: 10px;
-  color: #777;
-  border-radius: 4px;
+  border: 1px solid #555;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #ccc;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .edit-button:hover {
-  border-color: #555;
-  color: #555;
+  border-color: #013d7a;
+  color: #013d7a;
 }
 
 /* Payment Method */
 .payment-info {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .payment-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  border: 1px solid #BBB;
-  border-radius: 4px;
-  background-color: #FFF;
+  padding: 16px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #1a1a1a;
 }
 
 .card-info {
@@ -131,72 +150,75 @@
 }
 
 .card-type {
-  font-size: 10px;
-  color: #777;
-  margin-bottom: 4px;
+  font-size: 12px;
+  color: #ccc;
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .card-number {
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
 }
 
 .card-expiry {
-  font-size: 10px;
-  color: #777;
+  font-size: 12px;
+  color: #ccc;
 }
 
 .card-actions {
   display: flex;
-  gap: 8px;
+  gap: 12px;
 }
 
 .remove-button {
   background: none;
-  border: 1px solid #777;
-  padding: 4px 8px;
-  font-size: 10px;
-  color: #777;
-  border-radius: 4px;
+  border: 1px solid #555;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #ccc;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .remove-button:hover {
-  border-color: #555;
-  color: #555;
+  border-color: #dc2626;
+  color: #dc2626;
 }
 
 .add-payment-button {
   background: none;
-  border: 2px solid #000;
-  padding: 8px 16px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-  border-radius: 4px;
+  border: 2px solid #013d7a;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #013d7a;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .add-payment-button:hover {
-  background-color: #000;
-  color: #FFF;
+  background-color: #013d7a;
+  color: #ffffff;
 }
 
 /* Notification Settings */
 .notification-settings {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .setting-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid #EEE;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
 }
 
 .setting-item:last-child {
@@ -208,15 +230,15 @@
 }
 
 .setting-label {
-  font-size: 12px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
 }
 
 .setting-description {
-  font-size: 10px;
-  color: #777;
+  font-size: 12px;
+  color: #ccc;
 }
 
 .setting-control {
@@ -226,40 +248,47 @@
 
 .toggle-button {
   background: none;
-  border: 1px solid #777;
-  padding: 4px 8px;
-  font-size: 10px;
-  color: #777;
-  border-radius: 4px;
+  border: 1px solid #555;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #ccc;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .toggle-button.active {
-  background-color: #000;
-  color: #FFF;
-  border-color: #000;
+  background-color: #013d7a;
+  color: #ffffff;
+  border-color: #013d7a;
 }
 
 .toggle-button:hover {
-  border-color: #555;
-  color: #555;
+  border-color: #013d7a;
+  color: #013d7a;
 }
 
 .toggle-button.active:hover {
-  background-color: #333;
-  border-color: #333;
+  background-color: #024a94;
+  border-color: #024a94;
 }
 
 .timing-select {
-  background-color: #FFF;
-  border: 1px solid #777;
-  padding: 4px 8px;
-  font-size: 10px;
-  color: #000;
-  border-radius: 4px;
+  background-color: #1a1a1a;
+  border: 1px solid #555;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .timing-select:hover {
-  border-color: #555;
+  border-color: #013d7a;
+}
+
+.timing-select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
 }

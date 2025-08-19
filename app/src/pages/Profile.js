@@ -24,7 +24,7 @@ function Profile() {
               <div className="summary-count">5 active rentals</div>
               <div className="summary-status">1 overdue</div>
             </div>
-            <Link to="/current-rentals" className="view-all-link">[VIEW ALL]</Link>
+            <Link to="/current-rentals" className="view-all-link">VIEW ALL</Link>
           </div>
         </div>
         
@@ -36,7 +36,7 @@ function Profile() {
               <div className="summary-count">47 completed rentals</div>
               <div className="summary-status">Total spent: DKK 8,420</div>
             </div>
-            <Link to="/past-rentals" className="view-all-link">[VIEW ALL]</Link>
+            <Link to="/past-rentals" className="view-all-link">VIEW ALL</Link>
           </div>
         </div>
         
@@ -47,22 +47,22 @@ function Profile() {
             <div className="info-field">
               <div className="field-label">Name</div>
               <div className="field-value">Brian Bæk</div>
-              <button className="edit-button">[EDIT]</button>
+              <button className="edit-button">EDIT</button>
             </div>
             <div className="info-field">
               <div className="field-label">Email</div>
               <div className="field-value">brian.baek@email.dk</div>
-              <button className="edit-button">[EDIT]</button>
+              <button className="edit-button">EDIT</button>
             </div>
             <div className="info-field">
               <div className="field-label">Phone</div>
               <div className="field-value">+45 12 34 56 78</div>
-              <button className="edit-button">[EDIT]</button>
+              <button className="edit-button">EDIT</button>
             </div>
             <div className="info-field">
               <div className="field-label">Address</div>
               <div className="field-value">Nørrebrogade 123, 2200 København N</div>
-              <button className="edit-button">[EDIT]</button>
+              <button className="edit-button">EDIT</button>
             </div>
           </div>
         </div>
@@ -73,16 +73,16 @@ function Profile() {
           <div className="payment-info">
             <div className="payment-card">
               <div className="card-info">
-                <div className="card-type">[ICON: VISA]</div>
+                <div className="card-type">VISA</div>
                 <div className="card-number">**** **** **** 1234</div>
                 <div className="card-expiry">Expires 12/26</div>
               </div>
               <div className="card-actions">
-                <button className="edit-button">[EDIT]</button>
-                <button className="remove-button">[REMOVE]</button>
+                <button className="edit-button">EDIT</button>
+                <button className="remove-button">REMOVE</button>
               </div>
             </div>
-            <button className="add-payment-button">[ADD NEW CARD]</button>
+            <button className="add-payment-button">ADD NEW CARD</button>
           </div>
         </div>
         
@@ -96,7 +96,7 @@ function Profile() {
                 <div className="setting-description">Get reminded before rental ends</div>
               </div>
               <div className="setting-control">
-                <button className="toggle-button active">[ON]</button>
+                <button className="toggle-button active">ON</button>
               </div>
             </div>
             <div className="setting-item">
@@ -118,7 +118,7 @@ function Profile() {
                 <div className="setting-description">Promotions and new tools</div>
               </div>
               <div className="setting-control">
-                <button className="toggle-button">[OFF]</button>
+                <button className="toggle-button">OFF</button>
               </div>
             </div>
           </div>

@@ -3,6 +3,10 @@ import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
 import ToolCard from '../components/ToolCard';
 import { useState } from 'react';
+import drill from '../assets/drill.jpg';
+import sander from '../assets/sander.jpg';
+import driver from '../assets/driver.jpg';
+import mixer from '../assets/mixer.jpg';
 
 function ToolDetail() {
   const [showRentalTerms, setShowRentalTerms] = useState(false);
@@ -14,28 +18,36 @@ function ToolDetail() {
       name: 'Drill Bits Set',
       price: '25 DKK/day',
       available: true,
-      nextAvailable: null
+      nextAvailable: null,
+      specs: ['HSS', 'Set of 10', 'Metal'],
+      image: driver
     },
     {
       id: 'safety-glasses',
       name: 'Safety Glasses',
       price: '10 DKK/day',
       available: true,
-      nextAvailable: null
+      nextAvailable: null,
+      specs: ['Clear', 'Anti-fog', 'Safety'],
+      image: sander
     },
     {
       id: 'dust-mask',
       name: 'Dust Mask',
       price: '8 DKK/day',
       available: false,
-      nextAvailable: 'tomorrow'
+      nextAvailable: 'tomorrow',
+      specs: ['FFP2', 'Disposable', 'Safety'],
+      image: mixer
     },
     {
       id: 'extension-cord',
       name: 'Extension Cord',
       price: '15 DKK/day',
       available: true,
-      nextAvailable: null
+      nextAvailable: null,
+      specs: ['10m', '16A', 'Outdoor'],
+      image: drill
     }
   ];
   
@@ -53,13 +65,21 @@ function ToolDetail() {
       {/* Product Images */}
       <div className="product-images">
         <div className="main-image">
-          [MAIN IMAGE]
+          <img src={drill} alt="Power Drill XL" className="product-image" />
         </div>
         <div className="thumbnail-images">
-          <div className="thumbnail">[THUMB 1]</div>
-          <div className="thumbnail">[THUMB 2]</div>
-          <div className="thumbnail">[THUMB 3]</div>
-          <div className="thumbnail video-thumb">[VIDEO]</div>
+          <div className="thumbnail active">
+            <img src={drill} alt="Drill view 1" />
+          </div>
+          <div className="thumbnail">
+            <img src={drill} alt="Drill view 2" />
+          </div>
+          <div className="thumbnail">
+            <img src={drill} alt="Drill view 3" />
+          </div>
+          <div className="thumbnail video-thumb">
+            <div className="video-icon">▶</div>
+          </div>
         </div>
       </div>
       
@@ -96,8 +116,8 @@ function ToolDetail() {
       <div className="safety-section">
         <div className="safety-title">Safety & Usage</div>
         <div className="safety-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+          <p>Always wear safety glasses and hearing protection when operating this drill. Ensure the work area is well-lit and free from clutter. Check that drill bits are properly secured before use.</p>
+          <p>Keep hands away from rotating parts and maintain a firm grip on the tool. Disconnect power when changing bits or making adjustments. Store in a dry location when not in use.</p>
         </div>
       </div>
       
@@ -176,13 +196,13 @@ function ToolDetail() {
               <button className="close-button" onClick={() => setShowRentalTerms(false)}>×</button>
             </div>
             <div className="popup-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              <p><strong>Rental Period:</strong> Tools can be rented for a minimum of 1 day up to a maximum of 30 days. Extensions are possible subject to availability.</p>
               
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p><strong>Payment:</strong> Full payment is required at the time of booking. We accept cash, credit cards, and MobilePay. A security deposit may be required for high-value items.</p>
               
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <p><strong>Damage & Loss:</strong> Renter is responsible for any damage beyond normal wear and tear. Lost or stolen items will be charged at full replacement cost. Please inspect tools before taking them.</p>
               
-              <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <p><strong>Return Policy:</strong> Tools must be returned clean and in the same condition as received. Late returns incur additional daily charges. Returns are accepted during business hours only.</p>
             </div>
           </div>
         </div>
