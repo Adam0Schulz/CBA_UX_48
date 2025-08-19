@@ -49,6 +49,60 @@ function RentalDetail() {
         'Ensure electrical safety around water',
         'Check connections before starting'
       ]
+    },
+    'lawn-mower-electric': {
+      name: 'Lawn Mower Electric',
+      image: grinder, // Using grinder as placeholder
+      dueDate: '2025-08-25T14:00:00',
+      description: 'Electric lawn mower perfect for maintaining small to medium-sized lawns.',
+      specifications: [
+        'Cutting Width: 42cm',
+        'Motor: 1600W',
+        'Height Adjustment: 5 positions',
+        'Grass Box: 50L capacity'
+      ],
+      safetyNotes: [
+        'Always wear closed-toe shoes',
+        'Check for debris before mowing',
+        'Never mow wet grass',
+        'Keep children and pets away'
+      ]
+    },
+    'tile-cutter': {
+      name: 'Tile Cutter',
+      image: washer, // Using washer as placeholder
+      dueDate: '2025-08-23T10:00:00',
+      description: 'Professional tile cutter for precise cuts on ceramic and porcelain tiles.',
+      specifications: [
+        'Cutting Length: 600mm',
+        'Tile Thickness: up to 20mm',
+        'Diamond Blade: 200mm',
+        'Water Cooling System'
+      ],
+      safetyNotes: [
+        'Always wear safety glasses',
+        'Use water cooling to reduce dust',
+        'Secure tile properly before cutting',
+        'Keep hands away from blade'
+      ]
+    },
+    'concrete-mixer': {
+      name: 'Concrete Mixer',
+      image: grinder, // Using grinder as placeholder
+      dueDate: '2025-08-22T16:00:00',
+      description: 'Portable concrete mixer ideal for small to medium construction projects.',
+      specifications: [
+        'Capacity: 140L',
+        'Motor: 650W',
+        'Mixing Speed: 27 RPM',
+        'Weight: 65kg'
+      ],
+      safetyNotes: [
+        'Ensure stable positioning before use',
+        'Never exceed maximum capacity',
+        'Clean thoroughly after each use',
+        'Wear protective clothing'
+      ]
     }
   };
 
