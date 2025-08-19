@@ -1,0 +1,49 @@
+/* Hero Component - Dark Theme */
+.hero {
+  padding: 16px 20px;
+  background: transparent;
+  /* border-bottom: 1px solid #333333; */
+  /* margin-bottom: 16px; */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 12px;
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fog-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Dinpro', helvetica, arial, sans-serif;
+}
+
+.hero-slogan {
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}

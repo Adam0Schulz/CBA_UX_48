@@ -1,0 +1,164 @@
+/* Filter Button Component - Wireframe Styles */
+.filter-section {
+  position: relative;
+  padding: 16px;
+  background-color: transparent;
+  border-bottom: 1px solid #444;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.filter-button {
+  border: 2px solid #555;
+  padding: 8px 16px;
+  background-color: #2a2a2a;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+}
+
+/* Filter Popup */
+.filter-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 200;
+}
+
+.filter-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1a1a1a;
+  border: 2px solid #555;
+  border-radius: 4px;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 300;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #444;
+}
+
+.filter-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.filter-close {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ccc;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.filter-content {
+  padding: 16px;
+}
+
+.filter-group {
+  margin-bottom: 24px;
+}
+
+.filter-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Price Range */
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-input {
+  border: 1px solid #555;
+  padding: 8px 12px;
+  background-color: #2a2a2a;
+  font-size: 12px;
+  color: #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.price-separator {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Checkboxes */
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #555;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.checkbox-label {
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* Filter Actions */
+.filter-actions {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  border-top: 1px solid #444;
+}
+
+.filter-action-button {
+  flex: 1;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter-action-button.clear {
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: #ccc;
+}
+
+.filter-action-button.apply {
+  border: 2px solid #013d7a;
+  background-color: #013d7a;
+  color: #fff;
+}

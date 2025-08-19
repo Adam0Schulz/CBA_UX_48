@@ -1,0 +1,84 @@
+/* Tool Card Component - Wireframe Styles */
+.tool-card {
+  border: 1px solid #333333;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.tool-card:hover {
+  border-color: #999;
+}
+
+.tool-image {
+  width: 100%;
+  height: 120px;
+  background-color: #EEE;
+  border: 1px solid #BBB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #777;
+  border-radius: 4px;
+}
+
+.tool-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tool-name {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.tool-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tool-availability {
+  font-size: 12px;
+  padding: 0;
+  border-radius: 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.tool-availability.available {
+  color: #4caf50;
+}
+
+.tool-availability.available::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  flex-shrink: 0;
+}
+
+.tool-availability.unavailable {
+  color: #ff9800;
+}
+
+.tool-availability.unavailable::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff9800;
+  flex-shrink: 0;
+}
+

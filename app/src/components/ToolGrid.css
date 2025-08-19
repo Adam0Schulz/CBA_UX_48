@@ -1,0 +1,8 @@
+/* Tool Grid Component - Enhanced Dark Mode Styles */
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  border-radius: 8px;
+  margin-bottom: 80px; /* Space for bottom navigation */
+}

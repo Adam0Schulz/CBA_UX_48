@@ -1,0 +1,138 @@
+/* Current Rentals Component - Dark Theme */
+.current-rentals {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #333333;
+}
+
+.rental-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rental-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.rental-card:hover {
+  border-color: #404040;
+  background-color: #222222;
+}
+
+.rental-card.overdue {
+  border-color: #cc3333;
+  background-color: #2a1a1a;
+}
+
+.rental-image {
+  width: 80px;
+  height: 80px;
+  background-color: #2a2a2a;
+  border: 1px solid #404040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #888888;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.rental-info {
+  flex: 1;
+}
+
+.tool-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.due-info {
+  font-size: 14px;
+  color: #888888;
+}
+
+.rental-card.overdue .due-info {
+  color: #ff6666;
+  font-weight: 600;
+}
+
+.rental-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.action-button {
+  padding: 8px 12px; /* Increased from 4px 8px for better mobile touch */
+  border: 1px solid #777777; /* Using previous hover border color */
+  border-radius: 6px;
+  font-size: 14px; /* Increased from 10px for better readability */
+  color: #bbbbbb; /* Using previous hover text color */
+  text-align: center;
+  cursor: pointer;
+  min-width: 70px; /* Increased from 60px for better touch targets */
+  min-height: 36px; /* Added minimum height for better mobile touch */
+  background-color: #2a2a2a; /* Using previous hover background */
+}
+
+.action-button.return {
+  background-color: #013d7a; /* Using previous hover background */
+  border-color: #013d7a;
+  color: #ffffff; /* Using previous hover text color */
+  font-weight: 600;
+}
+
+/* More Rentals Section */
+.more-rentals {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+}
+
+.more-rentals-text {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.view-all-button {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #013d7a;
+  background-color: #013d7a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.view-all-button:hover {
+  background-color: #0a4a8a;
+  border-color: #0a4a8a;
+  transform: translateY(-1px);
+}
