@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './RentalCard.css';
 
 function RentalCard({ image, toolName, dueDate }) {
@@ -25,9 +26,11 @@ function RentalCard({ image, toolName, dueDate }) {
     });
   };
   
+  const navigate = useNavigate();
+  
   const handleClick = () => {
     const toolId = toolName.toLowerCase().replace(/\s+/g, '-');
-    window.location.href = `/rental/${toolId}`;
+    navigate(`/rental/${toolId}`);
   };
   
   return (
