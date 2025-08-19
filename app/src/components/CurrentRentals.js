@@ -14,16 +14,16 @@ function CurrentRentals() {
   const [isReturnPopupOpen, setIsReturnPopupOpen] = useState(false);
   const [selectedTool, setSelectedTool] = useState('');
 
-  const handleReturn = (toolName) => {
-    setSelectedTool(toolName);
-    setIsReturnPopupOpen(true);
-  };
+  // const handleReturn = (toolName) => {
+  //   setSelectedTool(toolName);
+  //   setIsReturnPopupOpen(true);
+  // };
 
-  const handleExtend = (toolName) => {
-    // Navigate to booking flow for extending rental
-    const toolId = toolName.toLowerCase().replace(/\s+/g, '-');
-    navigate(`/booking-dates/${toolId}`);
-  };
+  // const handleExtend = (toolName) => {
+  //   // Navigate to booking flow for extending rental
+  //   const toolId = toolName.toLowerCase().replace(/\s+/g, '-');
+  //   navigate(`/booking-dates/${toolId}`);
+  // };
 
   const closeReturnPopup = () => {
     setIsReturnPopupOpen(false);

@@ -5,9 +5,6 @@ import BottomNavigation from '../components/BottomNavigation';
 import ReturnPopup from '../components/ReturnPopup';
 import grinder from '../assets/angle_grinder.png';
 import washer from '../assets/washer.jpg';
-import mower from '../assets/mower.jpg';
-import tileCutter from '../assets/tile_cutter.jpg';
-import mixer from '../assets/mixer.jpg';
 import './RentalDetail.css';
 
 function RentalDetail() {
