@@ -1,158 +1,173 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './PastRentals.css';
+import grinder from '../assets/grinder.jpg';
+import washer from '../assets/washer.jpg';
+import drill from '../assets/drill.jpg';
+import saw from '../assets/rundsav.jpg';
 import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
-import './PastRentals.css';
 
 function PastRentals() {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isSortOpen, setIsSortOpen] = useState(false);
+  const [selectedFilter, setSelectedFilter] = useState('All Tools');
+  const [selectedSort, setSelectedSort] = useState('Most Recent');
+
+  const filterOptions = ['All Tools', 'Power Tools', 'Hand Tools', 'Garden Tools'];
+  const sortOptions = ['Most Recent', 'Oldest First', 'Price: High to Low', 'Price: Low to High'];
+
+  const toggleFilter = () => {
+    setIsFilterOpen(!isFilterOpen);
+    setIsSortOpen(false);
+  };
+
+  const toggleSort = () => {
+    setIsSortOpen(!isSortOpen);
+    setIsFilterOpen(false);
+  };
+
+  const handleFilterSelect = (option) => {
+    setSelectedFilter(option);
+    setIsFilterOpen(false);
+  };
+
+  const handleSortSelect = (option) => {
+    setSelectedSort(option);
+    setIsSortOpen(false);
+  };
+
+  const pastRentals = [
+    {
+      id: 1,
+      toolName: "Angle Grinder Pro",
+      period: "Jan 15-20, 2025",
+      cost: "450 DKK",
+      image: grinder
+    },
+    {
+      id: 2,
+      toolName: "Pressure Washer",
+      period: "Dec 10-15, 2024",
+      cost: "320 DKK",
+      image: washer
+    },
+    {
+      id: 3,
+      toolName: "Cordless Drill Set",
+      period: "Nov 5-8, 2024",
+      cost: "280 DKK",
+      image: drill
+    },
+    {
+      id: 4,
+      toolName: "Circular Saw",
+      period: "Oct 22-25, 2024",
+      cost: "380 DKK",
+      image: saw
+    },
+    {
+      id: 5,
+      toolName: "Impact Driver",
+      period: "Sep 12-16, 2024",
+      cost: "250 DKK",
+      image: drill
+    }
+  ];
+
   return (
     <div className="past-rentals-page">
       <ReminderBanner />
       
       <div className="main-content">
         {/* Page Header */}
-        <div className="page-header">
-          <Link to="/profile" className="back-link">[← BACK]</Link>
-          <div className="page-title">Past Rentals</div>
+        <div style={{marginBottom: '0px'}} className="page-header">
+          <Link to="/profile" className="back-link">← Back</Link>
+          <h1 className="page-title">Past Rentals</h1>
         </div>
-        
-        {/* Filter Options */}
+
+        {/* Filter Section */}
         <div className="filter-section">
-          <select className="filter-select">
-            <option>All rentals</option>
-            <option>Last 30 days</option>
-            <option>Last 3 months</option>
-            <option>Last year</option>
-          </select>
-          <select className="sort-select">
-            <option>Sort by date (newest)</option>
-            <option>Sort by date (oldest)</option>
-            <option>Sort by tool name</option>
-          </select>
+          <div className="custom-dropdown">
+            <div className="dropdown-button" onClick={toggleFilter}>
+              {selectedFilter} ▼
+            </div>
+            {isFilterOpen && (
+              <>
+                <div className="dropdown-backdrop" onClick={toggleFilter}></div>
+                <div className="dropdown-options">
+                  {filterOptions.map((option, index) => (
+                    <div 
+                      key={index}
+                      className={`dropdown-option ${selectedFilter === option ? 'selected' : ''}`}
+                      onClick={() => handleFilterSelect(option)}
+                    >
+                      {option}
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+          
+          <div className="custom-dropdown">
+            <div className="dropdown-button" onClick={toggleSort}>
+              {selectedSort} ▼
+            </div>
+            {isSortOpen && (
+              <>
+                <div className="dropdown-backdrop" onClick={toggleSort}></div>
+                <div className="dropdown-options">
+                  {sortOptions.map((option, index) => (
+                    <div 
+                      key={index}
+                      className={`dropdown-option ${selectedSort === option ? 'selected' : ''}`}
+                      onClick={() => handleSortSelect(option)}
+                    >
+                      {option}
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
         
         {/* Past Rentals List */}
         <div className="past-rentals-list">
-          <div className="past-rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Power Drill XL</div>
-              <div className="rental-period">Dec 15-17, 2024</div>
-              <div className="rental-cost">DKK 180</div>
+          {pastRentals.map((rental) => (
+            <div key={rental.id} className="past-rental-item">
+              <div className="rental-image">
+                <img src={rental.image} alt={rental.toolName} />
+              </div>
+              <div className="rental-details">
+                <div className="rental-name">{rental.toolName}</div>
+                <div className="rental-period">{rental.period}</div>
+                <div className="rental-cost">{rental.cost}</div>
+              </div>
+              <div className="rental-actions">
+                <button className="receipt-button">Receipt</button>
+                <button className="rent-again-button">Rent Again</button>
+              </div>
             </div>
-            <div className="rental-actions">
-              <button className="receipt-button">[RECEIPT]</button>
-              <button className="rent-again-button">[RENT AGAIN]</button>
-            </div>
-          </div>
-          
-          <div className="past-rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Circular Saw</div>
-              <div className="rental-period">Dec 8-10, 2024</div>
-              <div className="rental-cost">DKK 240</div>
-            </div>
-            <div className="rental-actions">
-              <button className="receipt-button">[RECEIPT]</button>
-              <button className="rent-again-button">[RENT AGAIN]</button>
-            </div>
-          </div>
-          
-          <div className="past-rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Hedge Trimmer</div>
-              <div className="rental-period">Nov 25-26, 2024</div>
-              <div className="rental-cost">DKK 120</div>
-            </div>
-            <div className="rental-actions">
-              <button className="receipt-button">[RECEIPT]</button>
-              <button className="rent-again-button">[RENT AGAIN]</button>
-            </div>
-          </div>
-          
-          <div className="past-rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Pressure Washer</div>
-              <div className="rental-period">Nov 18-20, 2024</div>
-              <div className="rental-cost">DKK 300</div>
-            </div>
-            <div className="rental-actions">
-              <button className="receipt-button">[RECEIPT]</button>
-              <button className="rent-again-button">[RENT AGAIN]</button>
-            </div>
-          </div>
-          
-          <div className="past-rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Angle Grinder</div>
-              <div className="rental-period">Nov 12-14, 2024</div>
-              <div className="rental-cost">DKK 150</div>
-            </div>
-            <div className="rental-actions">
-              <button className="receipt-button">[RECEIPT]</button>
-              <button className="rent-again-button">[RENT AGAIN]</button>
-            </div>
-          </div>
-          
-          <div className="past-rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Tile Cutter</div>
-              <div className="rental-period">Oct 28-30, 2024</div>
-              <div className="rental-cost">DKK 200</div>
-            </div>
-            <div className="rental-actions">
-              <button className="receipt-button">[RECEIPT]</button>
-              <button className="rent-again-button">[RENT AGAIN]</button>
-            </div>
-          </div>
-          
-          <div className="past-rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Lawn Mower</div>
-              <div className="rental-period">Oct 15-17, 2024</div>
-              <div className="rental-cost">DKK 180</div>
-            </div>
-            <div className="rental-actions">
-              <button className="receipt-button">[RECEIPT]</button>
-              <button className="rent-again-button">[RENT AGAIN]</button>
-            </div>
-          </div>
-          
-          <div className="past-rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Concrete Mixer</div>
-              <div className="rental-period">Oct 8-10, 2024</div>
-              <div className="rental-cost">DKK 350</div>
-            </div>
-            <div className="rental-actions">
-              <button className="receipt-button">[RECEIPT]</button>
-              <button className="rent-again-button">[RENT AGAIN]</button>
-            </div>
-          </div>
+          ))}
         </div>
         
-        {/* Load More */}
+        {/* Load More Section */}
         <div className="load-more-section">
-          <button className="load-more-button">[LOAD MORE RENTALS]</button>
-          <div className="showing-text">Showing 8 of 47 rentals</div>
+          <div className="showing-text">Showing 5 of 23 rentals</div>
+          <button className="load-more-button">Load More Rentals</button>
         </div>
         
         {/* Summary */}
         <div className="rentals-summary">
           <div className="summary-item">
-            <span className="summary-label">Total Past Rentals:</span>
-            <span className="summary-value">47</span>
+            <span className="summary-label">Total Rentals</span>
+            <span className="summary-value">23</span>
           </div>
           <div className="summary-item">
-            <span className="summary-label">Total Spent:</span>
-            <span className="summary-value">DKK 8,420</span>
+            <span className="summary-label">Total Spent</span>
+            <span className="summary-value">6,840 DKK</span>
           </div>
         </div>
         

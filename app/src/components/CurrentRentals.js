@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './CurrentRentals.css';
+import RentalCard from './RentalCard';
 import grinder from '../assets/angle_grinder.png';
 import washer from '../assets/washer.jpg';
 import mower from '../assets/mower.jpg';
@@ -54,29 +55,15 @@ function CurrentRentals() {
       
       <div className="rental-cards">
         {displayedRentals.map(rental => (
-          <div key={rental.id} className={`rental-card ${rental.overdue ? 'overdue' : ''}`}>
-            <div className="rental-image">
-              <img src={rental.image} alt={rental.toolName} style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '4px'}} />
-            </div>
-            
-            <div className="rental-info">
-              <div className="tool-name">
-                {rental.toolName}
-              </div>
-              <div className="due-info">
-                {rental.overdue ? rental.timeRemaining : `${rental.timeRemaining} remaining`}
-              </div>
-            </div>
-            
-            <div className="rental-actions">
-              <button className="action-button return">
-                Return
-              </button>
-              <button className="action-button extend">
-                Extend
-              </button>
-            </div>
-          </div>
+          <RentalCard
+            key={rental.id}
+            image={rental.image}
+            toolName={rental.toolName}
+            timeRemaining={rental.timeRemaining}
+            overdue={rental.overdue}
+            onExtend={() => console.log('Extend', rental.toolName)}
+            onReturn={() => console.log('Return', rental.toolName)}
+          />
         ))}
       </div>
       

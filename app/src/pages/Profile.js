@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
+import Hero from '../components/Hero';
 import './Profile.css';
 
 function Profile() {
@@ -10,9 +11,12 @@ function Profile() {
       {/* Banner Component */}
       <ReminderBanner />
       
+        {/* Hero Section */}
+        <Hero />
       <div className="main-content">
+
         {/* Page Header */}
-        <div className="page-header">
+        <div style={{paddingTop: '0px'}} className="page-header">
           Profile
         </div>
         

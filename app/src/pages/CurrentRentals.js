@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
+import RentalCard from '../components/RentalCard';
+import grinder from '../assets/angle_grinder.png';
+import washer from '../assets/washer.jpg';
+import mower from '../assets/mower.jpg';
+import tileCutter from '../assets/tile_cutter.jpg';
+import mixer from '../assets/mixer.jpg';
 import './CurrentRentals.css';
 
 function CurrentRentals() {
@@ -12,76 +18,56 @@ function CurrentRentals() {
       <div className="main-content">
         {/* Page Header */}
         <div className="page-header">
-          <Link to="/profile" className="back-link">[← BACK]</Link>
+          <Link to="/profile" className="back-link">← BACK</Link>
           <div className="page-title">Current Rentals</div>
         </div>
         
         {/* Current Rentals List */}
         <div className="rentals-list">
-          <div className="rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Angle Grinder Pro</div>
-              <div className="rental-period">Dec 18 - Dec 20, 2024</div>
-              <div className="rental-status">Due in 2 days</div>
-            </div>
-            <div className="rental-actions">
-              <button className="extend-button">[EXTEND]</button>
-              <button className="return-button">[RETURN]</button>
-            </div>
-          </div>
+          <RentalCard
+            image={grinder}
+            toolName="Angle Grinder Pro"
+            timeRemaining="2 days"
+            overdue={false}
+            onExtend={() => console.log('Extend Angle Grinder Pro')}
+            onReturn={() => console.log('Return Angle Grinder Pro')}
+          />
           
-          <div className="rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Pressure Washer</div>
-              <div className="rental-period">Dec 17 - Dec 19, 2024</div>
-              <div className="rental-status overdue">Overdue by 1 day</div>
-            </div>
-            <div className="rental-actions">
-              <button className="extend-button">[EXTEND]</button>
-              <button className="return-button urgent">[RETURN NOW]</button>
-            </div>
-          </div>
+          <RentalCard
+            image={washer}
+            toolName="Pressure Washer"
+            timeRemaining="Overdue"
+            overdue={true}
+            onExtend={() => console.log('Extend Pressure Washer')}
+            onReturn={() => console.log('Return Pressure Washer')}
+          />
           
-          <div className="rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Lawn Mower Electric</div>
-              <div className="rental-period">Dec 16 - Dec 22, 2024</div>
-              <div className="rental-status">Due in 4 days</div>
-            </div>
-            <div className="rental-actions">
-              <button className="extend-button">[EXTEND]</button>
-              <button className="return-button">[RETURN]</button>
-            </div>
-          </div>
+          <RentalCard
+            image={mower}
+            toolName="Lawn Mower Electric"
+            timeRemaining="4 days"
+            overdue={false}
+            onExtend={() => console.log('Extend Lawn Mower Electric')}
+            onReturn={() => console.log('Return Lawn Mower Electric')}
+          />
           
-          <div className="rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Tile Cutter</div>
-              <div className="rental-period">Dec 15 - Dec 21, 2024</div>
-              <div className="rental-status">Due in 3 days</div>
-            </div>
-            <div className="rental-actions">
-              <button className="extend-button">[EXTEND]</button>
-              <button className="return-button">[RETURN]</button>
-            </div>
-          </div>
+          <RentalCard
+            image={tileCutter}
+            toolName="Tile Cutter"
+            timeRemaining="3 days"
+            overdue={false}
+            onExtend={() => console.log('Extend Tile Cutter')}
+            onReturn={() => console.log('Return Tile Cutter')}
+          />
           
-          <div className="rental-item">
-            <div className="rental-image">[IMAGE]</div>
-            <div className="rental-details">
-              <div className="rental-name">Concrete Mixer</div>
-              <div className="rental-period">Dec 14 - Dec 20, 2024</div>
-              <div className="rental-status">Due in 2 days</div>
-            </div>
-            <div className="rental-actions">
-              <button className="extend-button">[EXTEND]</button>
-              <button className="return-button">[RETURN]</button>
-            </div>
-          </div>
+          <RentalCard
+            image={mixer}
+            toolName="Concrete Mixer"
+            timeRemaining="8 hours"
+            overdue={false}
+            onExtend={() => console.log('Extend Concrete Mixer')}
+            onReturn={() => console.log('Return Concrete Mixer')}
+          />
         </div>
         
         {/* Summary */}
