@@ -176,6 +176,16 @@
   text-transform: uppercase;
 }
 
+.recommended-badge {
+  background-color: #013d7a;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
 .extra-price {
   font-size: 14px;
   font-weight: 600;

@@ -35,32 +35,31 @@ function CurrentRentals() {
     {
       id: 1,
       toolName: "Angle Grinder Pro",
-      timeRemaining: "2 days",
+      dueDate: "2025-08-20T12:00:00",
       image: grinder
     },
     {
       id: 2,
       toolName: "Pressure Washer",
-      timeRemaining: "Overdue",
-      overdue: true,
+      dueDate: "2025-08-20T08:00:00",
       image: washer
     },
     {
       id: 3,
       toolName: "Lawn Mower Electric",
-      timeRemaining: "4 days",
+      dueDate: "2025-08-25T14:00:00",
       image: mower
     },
     {
       id: 4,
       toolName: "Tile Cutter",
-      timeRemaining: "3 days",
+      dueDate: "2025-08-23T10:00:00",
       image: tileCutter
     },
     {
       id: 5,
       toolName: "Concrete Mixer",
-      timeRemaining: "8 hours",
+      dueDate: "2025-08-22T16:00:00",
       image: mixer
     }
   ];
@@ -81,10 +80,7 @@ function CurrentRentals() {
             key={rental.id}
             image={rental.image}
             toolName={rental.toolName}
-            timeRemaining={rental.timeRemaining}
-            overdue={rental.overdue}
-            onExtend={() => handleExtend(rental.toolName)}
-            onReturn={() => handleReturn(rental.toolName)}
+            dueDate={rental.dueDate}
           />
         ))}
       </div>

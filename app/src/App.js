@@ -6,17 +6,20 @@ import ToolDetail from './pages/ToolDetail';
 import Profile from './pages/Profile';
 import CurrentRentals from './pages/CurrentRentals';
 import PastRentals from './pages/PastRentals';
+import RentalDetail from './pages/RentalDetail';
 import BookingDates from './pages/BookingDates';
 import BookingExtras from './pages/BookingExtras';
 import Checkout from './pages/Checkout';
 import Confirmation from './pages/Confirmation';
 import LanguageSelector from './components/LanguageSelector';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
+        <ScrollToTop />
         <LanguageSelector />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,6 +29,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/current-rentals" element={<CurrentRentals />} />
           <Route path="/past-rentals" element={<PastRentals />} />
+          <Route path="/rental/:id" element={<RentalDetail />} />
           <Route path="/booking-dates/:id" element={<BookingDates />} />
           <Route path="/booking-extras/:id" element={<BookingExtras />} />
           <Route path="/checkout/:id" element={<Checkout />} />

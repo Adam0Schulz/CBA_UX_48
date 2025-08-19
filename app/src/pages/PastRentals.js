@@ -82,8 +82,8 @@ function PastRentals() {
       <div className="main-content">
         {/* Page Header */}
         <div style={{marginBottom: '0px'}} className="page-header">
-          <Link to="/profile" className="back-link">← Back</Link>
-          <h1 className="page-title">Past Rentals</h1>
+          <Link to="/profile" className="back-link">← Back to Profile</Link>
+          <h1 className="page-title">My Past Rentals</h1>
         </div>
 
         {/* Filter Section */}
@@ -173,7 +173,7 @@ function PastRentals() {
         
       </div>
       
-      <BottomNavigation activeTab="profile" />
+      <BottomNavigation activeTab={null} />
     </div>
   );
 }

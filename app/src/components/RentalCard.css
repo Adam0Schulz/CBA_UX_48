@@ -1,4 +1,4 @@
-/* Rental Card Component - Shared Styling */
+/* Rental Card Component - Simplified Design */
 .rental-card {
   display: flex;
   align-items: center;
@@ -8,16 +8,12 @@
   background-color: #1a1a1a;
   gap: 12px;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .rental-card:hover {
   border-color: #404040;
   background-color: #222222;
-}
-
-.rental-card.overdue {
-  border-color: #cc3333;
-  background-color: #2a1a1a;
 }
 
 .rental-image {
@@ -32,6 +28,7 @@
   color: #888888;
   flex-shrink: 0;
   border-radius: 6px;
+  overflow: hidden;
 }
 
 .rental-info {
@@ -45,60 +42,20 @@
   margin-bottom: 4px;
 }
 
-.due-info {
+.due-date {
   font-size: 14px;
   color: #888888;
+  font-weight: 500;
 }
 
-.rental-card.overdue .due-info {
-  color: #ff6666;
+.due-date.overdue {
+  color: #ff4444;
   font-weight: 600;
 }
 
-.rental-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex-shrink: 0;
-}
-
-.action-button {
-  padding: 8px 12px;
-  border: 1px solid #777777;
-  border-radius: 6px;
-  font-size: 14px;
-  color: #bbbbbb;
-  text-align: center;
-  cursor: pointer;
-  min-width: 70px;
-  min-height: 36px;
-  background-color: #2a2a2a;
-  transition: all 0.2s ease;
-}
-
-.action-button.return {
-  background-color: #013d7a;
-  border-color: #013d7a;
-  color: #ffffff;
+.due-date.due-soon {
+  color: #ff9500;
   font-weight: 600;
 }
 
-.action-button.return:hover {
-  background-color: #0a4a8a;
-  border-color: #0a4a8a;
-}
-
-.action-button.return.urgent {
-  background-color: #cc3333;
-  border-color: #cc3333;
-}
-
-.action-button.return.urgent:hover {
-  background-color: #dd4444;
-  border-color: #dd4444;
-}
-
-.action-button.extend:hover {
-  border-color: #013d7a;
-  color: #013d7a;
-}
+/* Removed action buttons styling - cards now only show info */

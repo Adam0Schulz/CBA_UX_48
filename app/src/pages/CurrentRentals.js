@@ -39,8 +39,8 @@ function CurrentRentals() {
       <div className="main-content">
         {/* Page Header */}
         <div className="page-header">
-          <Link to="/profile" className="back-link">← BACK</Link>
-          <div className="page-title">Current Rentals</div>
+          <Link to="/profile" className="back-link">← Back to Profile</Link>
+          <div className="page-title">My Current Rentals</div>
         </div>
         
         {/* Current Rentals List */}
@@ -48,46 +48,31 @@ function CurrentRentals() {
           <RentalCard
             image={grinder}
             toolName="Angle Grinder Pro"
-            timeRemaining="2 days"
-            overdue={false}
-            onExtend={() => handleExtend('Angle Grinder Pro')}
-            onReturn={() => handleReturn('Angle Grinder Pro')}
+            dueDate="2025-08-20T12:00:00"
           />
           
           <RentalCard
             image={washer}
             toolName="Pressure Washer"
-            timeRemaining="Overdue"
-            overdue={true}
-            onExtend={() => handleExtend('Pressure Washer')}
-            onReturn={() => handleReturn('Pressure Washer')}
+            dueDate="2025-08-20T08:00:00"
           />
           
           <RentalCard
             image={mower}
             toolName="Lawn Mower Electric"
-            timeRemaining="4 days"
-            overdue={false}
-            onExtend={() => handleExtend('Lawn Mower Electric')}
-            onReturn={() => handleReturn('Lawn Mower Electric')}
+            dueDate="2025-08-25T14:00:00"
           />
           
           <RentalCard
             image={tileCutter}
             toolName="Tile Cutter"
-            timeRemaining="3 days"
-            overdue={false}
-            onExtend={() => handleExtend('Tile Cutter')}
-            onReturn={() => handleReturn('Tile Cutter')}
+            dueDate="2025-08-23T10:00:00"
           />
           
           <RentalCard
             image={mixer}
             toolName="Concrete Mixer"
-            timeRemaining="8 hours"
-            overdue={false}
-            onExtend={() => handleExtend('Concrete Mixer')}
-            onReturn={() => handleReturn('Concrete Mixer')}
+            dueDate="2025-08-22T16:00:00"
           />
         </div>
         
@@ -105,7 +90,7 @@ function CurrentRentals() {
         
       </div>
       
-      <BottomNavigation activeTab="profile" />
+      <BottomNavigation activeTab={null} />
       
       <ReturnPopup 
         isOpen={isReturnPopupOpen}

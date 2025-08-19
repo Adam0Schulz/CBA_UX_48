@@ -14,9 +14,8 @@ function BookingExtras() {
 
   const extras = [
     { id: 'protection', name: 'Tool Protection Insurance', price: 25, required: false },
-    { id: 'delivery', name: 'Home Delivery', price: 50, required: false },
     { id: 'setup', name: 'Professional Setup', price: 75, required: false },
-    { id: 'safety', name: 'Safety Equipment Kit', price: 30, required: true }
+    { id: 'safety', name: 'Safety Equipment Kit', price: 30, required: false, recommended: true }
   ];
 
   const handleExtraToggle = (extraId) => {
@@ -95,6 +94,7 @@ function BookingExtras() {
                   <div className="extra-name">
                     {extra.name}
                     {extra.required && <span className="required-badge">Required</span>}
+                    {extra.recommended && <span className="recommended-badge">Recommended</span>}
                   </div>
                   <div className="extra-price">+{extra.price} DKK</div>
                 </div>
