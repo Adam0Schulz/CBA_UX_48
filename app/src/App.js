@@ -10,12 +10,14 @@ import BookingDates from './pages/BookingDates';
 import BookingExtras from './pages/BookingExtras';
 import Checkout from './pages/Checkout';
 import Confirmation from './pages/Confirmation';
+import LanguageSelector from './components/LanguageSelector';
 import './App.css';
 
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
+        <LanguageSelector />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalogue" element={<Catalogue />} />
