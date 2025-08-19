@@ -3,6 +3,7 @@ import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
 import ToolCard from '../components/ToolCard';
 import { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import drill from '../assets/drill.jpg';
 import sander from '../assets/sander.jpg';
 import driver from '../assets/driver.jpg';
@@ -10,6 +11,8 @@ import mixer from '../assets/mixer.jpg';
 
 function ToolDetail() {
   const [showRentalTerms, setShowRentalTerms] = useState(false);
+  const navigate = useNavigate();
+  const { id } = useParams();
   
   // Related tools data
   const relatedTools = [
@@ -101,7 +104,12 @@ function ToolDetail() {
       
       {/* Book Button */}
       <div className="book-section">
-        <button className="book-button">Book Now</button>
+        <button 
+          className="book-button"
+          onClick={() => navigate(`/booking-dates/${id || 'angle-grinder'}`)}
+        >
+          Book Now
+        </button>
       </div>
       
       {/* CO2 Comparison */}
