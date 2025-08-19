@@ -323,3 +323,8 @@ _Hello, and thank you for helping me with my UX research project. I’m explorin
 ![[Pasted image 20250818143726.png]]
 ![[Pasted image 20250818143717.png]]
 ![[Pasted image 20250818143701.png]]
+
+### User stories
+- As a weekend renovator, I want to see real-time availability and book a tool online, so I can plan my project without delays
+- As a DIY enthusiast, I want to access quick video guides and safety instructions, so I can use tools safely and effectively.
+- As a planner, I want to receive reminders before my rental ends, so I can return the tool on time and avoid late fees.

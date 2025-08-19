@@ -59,6 +59,9 @@
   height: 28px; /* Reduced from 32px to 28px */
   min-width: 80px;
   flex-shrink: 0;
+  text-decoration: none;
+  height: fit-content;
+  text-align: center;
 }
 
 .banner-action:hover {

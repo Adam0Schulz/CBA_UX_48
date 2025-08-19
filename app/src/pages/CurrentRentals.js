@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import ReminderBanner from '../components/ReminderBanner';
 import BottomNavigation from '../components/BottomNavigation';
 import RentalCard from '../components/RentalCard';
+import ReturnPopup from '../components/ReturnPopup';
 import grinder from '../assets/angle_grinder.png';
 import washer from '../assets/washer.jpg';
 import mower from '../assets/mower.jpg';
@@ -11,6 +12,26 @@ import mixer from '../assets/mixer.jpg';
 import './CurrentRentals.css';
 
 function CurrentRentals() {
+  const navigate = useNavigate();
+  const [isReturnPopupOpen, setIsReturnPopupOpen] = useState(false);
+  const [selectedTool, setSelectedTool] = useState('');
+
+  const handleReturn = (toolName) => {
+    setSelectedTool(toolName);
+    setIsReturnPopupOpen(true);
+  };
+
+  const handleExtend = (toolName) => {
+    // Navigate to booking flow for extending rental
+    const toolId = toolName.toLowerCase().replace(/\s+/g, '-');
+    navigate(`/booking-dates/${toolId}`);
+  };
+
+  const closeReturnPopup = () => {
+    setIsReturnPopupOpen(false);
+    setSelectedTool('');
+  };
+
   return (
     <div className="current-rentals-page">
       <ReminderBanner />
@@ -29,8 +50,8 @@ function CurrentRentals() {
             toolName="Angle Grinder Pro"
             timeRemaining="2 days"
             overdue={false}
-            onExtend={() => console.log('Extend Angle Grinder Pro')}
-            onReturn={() => console.log('Return Angle Grinder Pro')}
+            onExtend={() => handleExtend('Angle Grinder Pro')}
+            onReturn={() => handleReturn('Angle Grinder Pro')}
           />
           
           <RentalCard
@@ -38,8 +59,8 @@ function CurrentRentals() {
             toolName="Pressure Washer"
             timeRemaining="Overdue"
             overdue={true}
-            onExtend={() => console.log('Extend Pressure Washer')}
-            onReturn={() => console.log('Return Pressure Washer')}
+            onExtend={() => handleExtend('Pressure Washer')}
+            onReturn={() => handleReturn('Pressure Washer')}
           />
           
           <RentalCard
@@ -47,8 +68,8 @@ function CurrentRentals() {
             toolName="Lawn Mower Electric"
             timeRemaining="4 days"
             overdue={false}
-            onExtend={() => console.log('Extend Lawn Mower Electric')}
-            onReturn={() => console.log('Return Lawn Mower Electric')}
+            onExtend={() => handleExtend('Lawn Mower Electric')}
+            onReturn={() => handleReturn('Lawn Mower Electric')}
           />
           
           <RentalCard
@@ -56,8 +77,8 @@ function CurrentRentals() {
             toolName="Tile Cutter"
             timeRemaining="3 days"
             overdue={false}
-            onExtend={() => console.log('Extend Tile Cutter')}
-            onReturn={() => console.log('Return Tile Cutter')}
+            onExtend={() => handleExtend('Tile Cutter')}
+            onReturn={() => handleReturn('Tile Cutter')}
           />
           
           <RentalCard
@@ -65,8 +86,8 @@ function CurrentRentals() {
             toolName="Concrete Mixer"
             timeRemaining="8 hours"
             overdue={false}
-            onExtend={() => console.log('Extend Concrete Mixer')}
-            onReturn={() => console.log('Return Concrete Mixer')}
+            onExtend={() => handleExtend('Concrete Mixer')}
+            onReturn={() => handleReturn('Concrete Mixer')}
           />
         </div>
         
@@ -85,6 +106,12 @@ function CurrentRentals() {
       </div>
       
       <BottomNavigation activeTab="profile" />
+      
+      <ReturnPopup 
+        isOpen={isReturnPopupOpen}
+        onClose={closeReturnPopup}
+        toolName={selectedTool}
+      />
     </div>
   );
 }

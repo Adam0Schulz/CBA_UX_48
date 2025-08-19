@@ -1,0 +1,104 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.popup-content {
+  background: #0f0f0f;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid #333;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+.popup-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #b0b0b0;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.popup-body {
+  padding: 0 20px;
+}
+
+.tool-info {
+  margin-bottom: 20px;
+}
+
+.tool-name {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.return-message {
+  color: #b0b0b0;
+  font-size: 14px;
+  margin: 0;
+}
+
+.popup-footer {
+  padding: 20px;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: center;
+}
+
+.close-popup-button {
+  background: #013d7a;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close-popup-button:hover {
+  background: #0056a3;
+}

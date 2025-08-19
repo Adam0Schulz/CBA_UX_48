@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import './CurrentRentals.css';
 import RentalCard from './RentalCard';
+import ReturnPopup from './ReturnPopup';
 import grinder from '../assets/angle_grinder.png';
 import washer from '../assets/washer.jpg';
 import mower from '../assets/mower.jpg';
@@ -8,6 +10,26 @@ import tileCutter from '../assets/tile_cutter.jpg';
 import mixer from '../assets/mixer.jpg';
 
 function CurrentRentals() {
+  const navigate = useNavigate();
+  const [isReturnPopupOpen, setIsReturnPopupOpen] = useState(false);
+  const [selectedTool, setSelectedTool] = useState('');
+
+  const handleReturn = (toolName) => {
+    setSelectedTool(toolName);
+    setIsReturnPopupOpen(true);
+  };
+
+  const handleExtend = (toolName) => {
+    // Navigate to booking flow for extending rental
+    const toolId = toolName.toLowerCase().replace(/\s+/g, '-');
+    navigate(`/booking-dates/${toolId}`);
+  };
+
+  const closeReturnPopup = () => {
+    setIsReturnPopupOpen(false);
+    setSelectedTool('');
+  };
+
   // Mock data for current rentals - following wireframe guidelines
   const allCurrentRentals = [
     {
@@ -61,8 +83,8 @@ function CurrentRentals() {
             toolName={rental.toolName}
             timeRemaining={rental.timeRemaining}
             overdue={rental.overdue}
-            onExtend={() => console.log('Extend', rental.toolName)}
-            onReturn={() => console.log('Return', rental.toolName)}
+            onExtend={() => handleExtend(rental.toolName)}
+            onReturn={() => handleReturn(rental.toolName)}
           />
         ))}
       </div>
@@ -77,6 +99,12 @@ function CurrentRentals() {
           </Link>
         </div>
       )}
+      
+      <ReturnPopup 
+        isOpen={isReturnPopupOpen}
+        onClose={closeReturnPopup}
+        toolName={selectedTool}
+      />
     </div>
   );
 }

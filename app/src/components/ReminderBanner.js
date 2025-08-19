@@ -1,4 +1,5 @@
 import './ReminderBanner.css';
+import { Link } from 'react-router-dom';
 
 function ReminderBanner() {
   return (
@@ -12,9 +13,9 @@ function ReminderBanner() {
         <div className="banner-text">
           Rental due in 2 days
         </div>
-        <button className="banner-action">
-          View Details
-        </button>
+        <Link to="/current-rentals" className="banner-action">
+          View
+        </Link>
       </div>
     </div>
   );

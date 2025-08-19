@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Confirmation.css';
 import ReminderBanner from '../components/ReminderBanner';
+import InstructionCard from '../components/InstructionCard';
 
 function Confirmation() {
   const location = useLocation();
@@ -75,44 +76,7 @@ function Confirmation() {
         {/* Pickup Instructions */}
         <div className="pickup-instructions">
           <h3 className="section-title">Pickup Instructions</h3>
-          
-          <div className="instruction-card">
-            <div className="instruction-item">
-              <div className="instruction-icon">📍</div>
-              <div className="instruction-content">
-                <div className="instruction-title">Pickup Location</div>
-                <div className="instruction-text">
-                  Johannes Fog Rødovre<br/>
-                  Rødovre Parkvej 190<br/>
-                  2610 Rødovre
-                </div>
-              </div>
-            </div>
-            
-            <div className="instruction-item">
-              <div className="instruction-icon">🕐</div>
-              <div className="instruction-content">
-                <div className="instruction-title">Opening Hours</div>
-                <div className="instruction-text">
-                  Mon-Fri: 7:00 - 18:00<br/>
-                  Saturday: 8:00 - 16:00<br/>
-                  Sunday: 10:00 - 14:00
-                </div>
-              </div>
-            </div>
-            
-            <div className="instruction-item">
-              <div className="instruction-icon">🆔</div>
-              <div className="instruction-content">
-                <div className="instruction-title">What to Bring</div>
-                <div className="instruction-text">
-                  • Valid photo ID<br/>
-                  • Booking confirmation<br/>
-                  • Payment card used for booking
-                </div>
-              </div>
-            </div>
-          </div>
+          <InstructionCard type="pickup" />
         </div>
 
         {/* Action Buttons */}
