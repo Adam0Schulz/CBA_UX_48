@@ -11,6 +11,8 @@ import BookingDates from './pages/BookingDates';
 import BookingExtras from './pages/BookingExtras';
 import Checkout from './pages/Checkout';
 import Confirmation from './pages/Confirmation';
+import ExtendRental from './pages/ExtendRental';
+import ExtendCheckout from './pages/ExtendCheckout';
 import LanguageSelector from './components/LanguageSelector';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
@@ -34,6 +36,8 @@ function App() {
           <Route path="/booking-extras/:id" element={<BookingExtras />} />
           <Route path="/checkout/:id" element={<Checkout />} />
           <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/extend-rental/:id" element={<ExtendRental />} />
+          <Route path="/extend-checkout/:id" element={<ExtendCheckout />} />
         </Routes>
       </div>
     </Router>

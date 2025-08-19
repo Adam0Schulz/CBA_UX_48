@@ -109,7 +109,7 @@ function RentalDetail() {
   const rental = rentalData[id] || rentalData['angle-grinder-pro'];
 
   const handleExtend = () => {
-    navigate(`/booking-dates/${id}`);
+    navigate(`/extend-rental/${id}`);
   };
 
   const handleReturn = () => {

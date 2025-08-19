@@ -120,6 +120,16 @@ function ToolDetail() {
         </div>
       </div>
       
+      {/* Product Description */}
+      <div className="description-section">
+        <div className="description-title">Product Description</div>
+        <div className="description-content">
+          <p>The Power Drill XL is a professional-grade corded drill designed for both DIY enthusiasts and contractors. With its powerful 750W motor and variable speed control, this drill handles everything from delicate precision work to heavy-duty drilling tasks.</p>
+          <p>Features a comfortable ergonomic grip that reduces fatigue during extended use, along with a keyless chuck for quick and easy bit changes. The integrated LED work light illuminates your work area for improved accuracy in low-light conditions.</p>
+          <p>Perfect for drilling into wood, metal, plastic, and masonry materials. Includes a 3-meter cable for extended reach without the need for extension cords in most applications.</p>
+        </div>
+      </div>
+      
       {/* Safety and Usage Section */}
       <div className="safety-section">
         <div className="safety-title">Safety & Usage</div>

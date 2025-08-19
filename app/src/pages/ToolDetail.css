@@ -135,6 +135,34 @@
   border: 1px solid #22c55e;
 }
 
+/* Product Description Section */
+.description-section {
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.description-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-family: 'Dinpro', helvetica, arial, sans-serif;
+}
+
+.description-content {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.description-content p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.description-content p:last-child {
+  margin-bottom: 0;
+}
+
 /* Book Section */
 .book-section {
   padding: 24px 0;
