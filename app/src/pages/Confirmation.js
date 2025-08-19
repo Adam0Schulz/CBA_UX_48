@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Confirmation.css';
 import ReminderBanner from '../components/ReminderBanner';
 import InstructionCard from '../components/InstructionCard';
