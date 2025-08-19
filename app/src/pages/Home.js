@@ -17,7 +17,7 @@ function Home() {
       <Hero />
       
       {/* Main Content Area */}
-      <div className="main-content">
+      <main className="main-content" role="main" aria-label="Home page content">
         
         {/* Current Rentals Section */}
         <CurrentRentals />
@@ -31,7 +31,7 @@ function Home() {
         {/* Recommendations Section */}
         <Recommendations />
         
-      </div>
+      </main>
 
       {/* Bottom Navigation Component */}
       <BottomNavigation activeTab="home" />

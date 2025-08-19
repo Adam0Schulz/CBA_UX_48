@@ -8,9 +8,9 @@ function ToolCard({ tool }) {
     navigate(`/tool/${tool.id}`);
   };
   return (
-    <div className="tool-card" onClick={handleCardClick}>
+    <div className="tool-card" onClick={handleCardClick} role="button" tabIndex={0} aria-label={`View details for ${tool.name}, ${tool.available ? 'available now' : `available ${tool.nextAvailable}`}, ${tool.price}`}>
       <div className="tool-image">
-        {tool.image && <img src={tool.image} alt={tool.name} style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px'}} />}
+        {tool.image && <img src={tool.image} alt={`${tool.name} tool`} style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px'}} />}
         {!tool.image && '[IMAGE]'}
       </div>
       
